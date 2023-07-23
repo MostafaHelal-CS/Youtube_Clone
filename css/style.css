@@ -1,0 +1,358 @@
+/* Start Global Rule */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+:root {
+    --main-transition:0.3s;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+/* End Global Rule */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    padding: 0 1.6rem;
+    height: 6rem;
+}
+
+header .leftSection {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .leftSection .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .leftSection .logo i {
+    color: red;
+}
+
+header .leftSection .logo h2 {
+    letter-spacing: 0px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    position: relative;
+    cursor: pointer;    
+}
+
+header .leftSection .logo h2 span {
+    position: absolute;
+    top: -5px;
+    font-size: 1rem;
+}
+
+header .leftSection  i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header .leftSection {
+        gap: 5px;
+    }
+    header .leftSection .logo h2 {
+        font-size: 1.2rem;
+    }
+
+    header .leftSection .logo h2 span {
+        font-size: 0.8rem;
+    }
+
+    header .leftSection  i {
+        font-size: 1.6rem;
+    }
+}
+header .centerSection {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .centerSection form {
+    display: flex;
+    width: 60rem;
+    height: 4rem;
+}
+
+header .centerSection input {
+    width: 100%;
+    border-radius: 3rem 0 0 3rem ;
+    padding: 0 1.6rem;
+    outline: none;
+    font-size: 1.6rem;
+    border: 1px solid #d3d3d3;
+    border-right: none;
+}
+
+header .centerSection input:focus {
+    border: 1px solid #065fd4 ;
+}
+header .centerSection button {
+    width: 6rem;
+    outline: none;
+    border: 1px solid #eee;
+    background-color: #eee;
+    font-size: 2rem;
+    border-radius: 0 3rem 3rem 0 ;
+    border-left: none;
+    cursor: pointer;
+}
+
+header .centerSection .mic {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+header .centerSection .mic:hover {
+    background-color: #eee;
+}
+
+header .centerSection i {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    header .centerSection {
+        gap: 5px;
+    }
+    header .centerSection form {
+        width: 15rem;
+        height: 2.5rem;
+        margin-left: 20px;
+    }
+
+    header .centerSection button {
+        width: 4rem;
+    }
+
+    header .centerSection i {
+        font-size: 0.5rem;
+    }
+    header .centerSection .mic {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    header .centerSection i {
+        font-size: 1.6rem;
+    }
+}
+header .rightSection {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header .rightSection a {
+    text-decoration: none;
+    color: black;
+}
+header .rightSection i {
+    font-size: 2rem;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    header .rightSection {
+        gap: 5px;
+    }
+    header .rightSection i {
+        font-size: 1.6rem;
+    }
+}
+/* End Header */
+/* Start Aside */
+
+.content {
+    display: flex;
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-color: #f8f8f8;
+}
+
+.content aside {
+    width: 280px;
+    height: 100%;
+    background-color: white;
+    overflow-y: auto;
+}
+
+@media (max-width:768px) {
+    .content aside {
+        width: 60px;
+        text-align: center;
+    }
+
+    .content aside:hover {
+        width: 350px;
+    }
+}
+.content aside nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0; 
+}
+
+.content aside nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 16px;
+}
+
+.content aside nav a i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #030303;
+    margin-right: 2rem;
+}
+
+.content aside nav a span {
+    font-size: 1.5rem;
+    color: #030303;
+    font-weight: 400;
+}
+ .active {
+    background-color: #eee;
+}
+
+.content aside nav a:hover {
+    background-color: #f8f8f8;
+}
+
+.content aside nav hr {
+    background-color: #eee;
+    margin: 10px;
+    height: 1px;
+}
+
+.content aside nav p {
+    font-size: 1.5rem;
+    margin: 10px 16px;
+    font-weight: 500;
+    color: #606060;
+}
+
+@media (max-width:768px) {
+    .content aside nav p {
+        font-size: 0.5rem;
+        font-weight: 500;
+        color: #606060;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.channel-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+/* End Aside */
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    padding:35px 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.main-content .video-container {
+    /* display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    grid-column-gap: 20px;
+}
+
+.main-content .video-container .video-carts {
+    /* width: 280px; */
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.main-content .video-container .video-carts .video-creator {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 10px;
+}
+
+.main-content .video-container .video-carts .video-creator video {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    padding-bottom: px;
+}
+
+.main-content .video-container .video-carts .video-details {
+    display: flex;
+    align-items: center;
+}
+
+.main-content .video-container .video-carts .video-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 10px;
+}
+
+.main-content .video-container .video-carts .video-details .video-describtion {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .video-container .video-carts .video-details .video-describtion .title {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #060606;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.main-content .video-container .video-carts .video-details .video-describtion .channel-owner {
+    text-decoration: none;
+    color: #606060;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.main-content .video-container .video-carts .video-details .video-describtion span {
+    text-decoration: none;
+    color: #606060;
+    font-size: 1.3rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
